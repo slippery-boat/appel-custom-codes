@@ -73,7 +73,7 @@ function App() {
               showMakeLevel ? (
                 <div style={{ marginTop: '3rem', textAlign: 'center', color: '#fff' }}>
                   <h2 style={{ color: 'red', fontSize: '2rem' }}>Make Level Instructions</h2>
-                  <iframe src="/make-level.pdf" style={{ width: '80vw', height: '70vh', border: '2px solid #000', borderRadius: '8px', background: '#fff' }} title="Make Level PDF" />
+                  <iframe src="https://ominous-waffle-x5g95wq4xq5wh6547-3002.app.github.dev/appel-custom-codes/make-level.pdf" style={{ width: '80vw', height: '70vh', border: '2px solid #000', borderRadius: '8px', background: '#fff' }} title="Make Level PDF" />
                   <br />
                   <button style={{ fontSize: '1rem', padding: '0.5rem 1rem', borderRadius: '6px', border: '2px solid black', cursor: 'pointer', marginTop: '1rem' }} onClick={() => setShowMakeLevel(false)}>Back</button>
                 </div>
@@ -100,7 +100,7 @@ function App() {
                   <>
                     <button
                       style={{ margin: '1.3rem 0', padding: '0.65rem 1.3rem', fontSize: '1.3rem', cursor: 'pointer', borderRadius: '7.8px', border: '2.6px solid black', background: '#fff' }}
-                      onClick={() => window.open('/Appel v1.html', '_blank')}
+                      onClick={() => window.open('https://ominous-waffle-x5g95wq4xq5wh6547-3001.app.github.dev/appel-custom-codes/Appel%20v1.html', '_blank')}
                     >
                       Run Appel
                     </button>
@@ -145,7 +145,7 @@ function App() {
                     </button>
                     <button
                       style={{ marginTop: '1.3rem', padding: '0.65rem 1.3rem', fontSize: '1.3rem', cursor: 'pointer', borderRadius: '7.8px', border: '2.6px solid black', background: 'red', color: '#fff', display: 'block', marginLeft: 'auto', marginRight: 'auto', marginBottom: '1.2rem' }}
-                      onClick={() => window.open('/Appel v1.html', '_blank')}
+                      onClick={() => window.open('https://ominous-waffle-x5g95wq4xq5wh6547-3002.app.github.dev/appel-custom-codes/Appel%20v1.html', '_blank')}
                     >
                       Start Appel
                     </button>
