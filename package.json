@@ -1,5 +1,6 @@
 {
-  "name": "codespaces-react",
+  "name": "appel-custom-codes",
+  "homepage": "https://slippery-boat.github.io/appel-custom-codes/",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -7,6 +8,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "web-vitals": "^3.1.0"
@@ -20,7 +22,8 @@
     "start": "BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
