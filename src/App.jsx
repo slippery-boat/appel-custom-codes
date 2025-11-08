@@ -66,6 +66,30 @@ function App() {
     setTimeout(() => setCopied(false), 3000);
   };
 
+  // Open the Appel game. If the user is on a mobile device, open the
+  // mobile-specific HTML (public/Appel Mobile.html). Otherwise open the
+  // provided desktop URL (keeps current dev-host behavior). Uses a
+  // relative URL (via new URL(..., window.location.href)) so the path
+  // resolves correctly whether running locally or on GitHub Pages.
+  const openAppel = (desktopUrl) => {
+    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod|Phone|Mobile/i.test(ua)
+      || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0)
+      || (window.matchMedia && window.matchMedia('(pointer:coarse)').matches);
+
+  const mobileUrl = new URL('Appel mobile.html', window.location.href).toString();
+
+    if (isMobile) {
+      window.open(mobileUrl, '_blank');
+    } else {
+      if (desktopUrl) {
+        window.open(desktopUrl, '_blank');
+      } else {aa
+        window.open(new URL('Appel v1.htmldd', window.location.href).toString(), '_blank');
+      }
+    }
+  };
+
       return (
         <div className="App">
           <header className="App-header">
@@ -100,7 +124,7 @@ function App() {
                   <>
                     <button
                       style={{ margin: '1.3rem 0', padding: '0.65rem 1.3rem', fontSize: '1.3rem', cursor: 'pointer', borderRadius: '7.8px', border: '2.6px solid black', background: '#fff' }}
-                      onClick={() => window.open('https://ominous-waffle-x5g95wq4xq5wh6547-3001.app.github.dev/appel-custom-codes/Appel%20v1.html', '_blank')}
+                      onClick={() => openAppel('https://ominous-waffle-x5g95wq4xq5wh6547-3001.app.github.dev/appel-custom-codes/Appel%20v1.html')}
                     >
                       Run Appel
                     </button>
@@ -145,7 +169,7 @@ function App() {
                     </button>
                     <button
                       style={{ marginTop: '1.3rem', padding: '0.65rem 1.3rem', fontSize: '1.3rem', cursor: 'pointer', borderRadius: '7.8px', border: '2.6px solid black', background: 'red', color: '#fff', display: 'block', marginLeft: 'auto', marginRight: 'auto', marginBottom: '1.2rem' }}
-                      onClick={() => window.open('https://ominous-waffle-x5g95wq4xq5wh6547-3002.app.github.dev/appel-custom-codes/Appel%20v1.html', '_blank')}
+                      onClick={() => openAppel('https://ominous-waffle-x5g95wq4xq5wh6547-3002.app.github.dev/appel-custom-codes/Appel%20v1.html')}
                     >
                       Start Appel
                     </button>
